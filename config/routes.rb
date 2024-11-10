@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get "pages/about"
+  get "about", to: "pages#index", as: "about"
   get "move/show"
-  get "type", to: "type#index"
-  get "pokemon", to: "type#index"
+  get "type", to: "type#index", as: "type_index"
+  get "pokemon", to: "pokemon#index", as: "pokemon_index"
   get "pokemon/show"
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Intro Proejct" %></title>
+    <title><%= content_for(:title) || "Intro Project" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
@@ -18,6 +18,13 @@
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'All Pokemon', pokemon_index_path %></li>
+        <li><%= link_to 'Pokemon Types', type_index_path%>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>
