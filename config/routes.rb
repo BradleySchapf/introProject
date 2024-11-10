@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get "move"
-  get "type", to: "type/index"
-  get "pokemon", to: "type/index"
+  get "pages/about"
+  get "move/show"
+  get "type", to: "type#index"
+  get "pokemon", to: "type#index"
   get "pokemon/show"
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -14,5 +15,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  root "pokemon#index"
+  root "pages#about"
 end
