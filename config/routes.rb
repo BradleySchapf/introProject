@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "moves/index"
+  get "moves/show"
   get "about", to: "pages#index", as: "about"
 
   resources :moves, only: [:show]
