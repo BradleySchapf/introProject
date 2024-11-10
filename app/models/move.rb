@@ -1,5 +1,5 @@
 class Move < ApplicationRecord
-  belongs_to :types
+  belongs_to :type
   has_and_belongs_to_many :pokemons
 
   # validations
