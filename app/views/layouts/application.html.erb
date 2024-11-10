@@ -21,9 +21,10 @@
     <nav>
       <ul>
         <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'All Pokemon', pokemon_index_path %></li>
-        <li><%= link_to 'Pokemon Types', type_index_path%>
-      </ul>
+        <li><%= link_to 'All Pokemon', pokemons_path %></li>
+        <li><%= link_to 'Pokemon Types', types_path%></li>
+        <li><%= link_to 'Pokemon Moves', moves_path%></li>
+      </ul> 
     </nav>
     <%= yield %>
   </body>
