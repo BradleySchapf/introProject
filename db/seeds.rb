@@ -48,7 +48,7 @@ pokemon_data.each do |pokemon|
   # Create Pokemon with associated types and moves
   created_pokemon = Pokemon.create!(
     name: pokemon["name"]["english"],
-    HP: pokemon["base"]["HP"],
+    hp: pokemon["base"]["HP"],
     attack: pokemon["base"]["Attack"],
     defense: pokemon["base"]["Defense"],
     sp_attack: pokemon["base"]["Sp. Attack"],

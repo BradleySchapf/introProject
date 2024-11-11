@@ -2,7 +2,7 @@
 
 one:
   name: MyString
-  HP: 1
+  hp: 1
   attack: 1
   defense: 1
   sp_attack: 1
@@ -11,7 +11,7 @@ one:
 
 two:
   name: MyString
-  HP: 1
+  hp: 1
   attack: 1
   defense: 1
   sp_attack: 1
