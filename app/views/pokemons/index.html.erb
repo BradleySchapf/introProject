@@ -1,10 +1,19 @@
 <h1>Pokemon</h1>
 <h3>Here is a comprehensive list of all Pokemon</h3>
-
-<ul>
-    <% @pokemons.each do |pokemon|%>
-        <li>
-            <strong>Name:</strong> <%= link_to pokemon.name, pokemon_path(pokemon) %>
-        </li>
+<%= form_with url: pokemons_path, method: :get, local: true do %>
+  <div>
+    <%= label_tag :query, "Search Pokémon" %>
+    <%= text_field_tag :query, params[:query] %>
+    <%= submit_tag "Search" %>
+  </div>
+<% end %>
+<% if @pokemons.any? %>
+  <ul>
+    <% @pokemons.each do |pokemon| %>
+      <li><%= link_to pokemon.name, pokemon_path(pokemon) %></li>
     <% end %>
-</ul>
+  </ul>
+<% else %>
+  <p>No Pokémon found.</p>
+<% end %>
+
