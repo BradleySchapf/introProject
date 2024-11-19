@@ -1,2 +1,15 @@
-<h1>Moves#show</h1>
-<p>Find me in app/views/moves/show.html.erb</p>
+<h1><%= @move.name %></h1>
+
+<div>
+  <h3>Move Details</h3>
+  <ul>
+    <li><strong>Accuracy:</strong> <%= @move.accuracy %></li>
+    <li><strong>Power:</strong> <%= @move.power %></li>
+    <li><strong>PP:</strong> <%= @move.pp %></li>
+    <li><strong>Type:</strong> <%= @move.type.name %></li>
+  </ul>
+</div>
+
+<div>
+  <%= link_to 'Back to All Moves', moves_path %>
+</div>
