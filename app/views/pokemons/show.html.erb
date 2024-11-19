@@ -1,2 +1,16 @@
-<h1>Pokemons#show</h1>
-<p>Find me in app/views/pokemons/show.html.erb</p>
+<h1><%= @pokemon.name =%></h1>
+<div>
+  <h3>Stats</h3>
+  <ul>
+    <li><strong>HP:</strong> <%= @pokemon.hp %></li>
+    <li><strong>Attack:</strong> <%= @pokemon.attack %></li>
+    <li><strong>Defence:</strong> <%= @pokemon.defence %></li>
+    <li><strong>Special Attack:</strong> <%= @pokemon.sp_attack %></li>
+    <li><strong>Special Defence:</strong> <%= @pokemon.sp_defence %></li>
+    <li><strong>Speed:</strong> <%= @pokemon.speed %></li>
+  </ul>
+</div>
+
+<div>
+  <%= link_to 'Back to All Pokémon', pokemons_path %>
+</div>
